@@ -1,67 +1,27 @@
+import java.util.List;
 
-public class PokemonGym {
+public interface PokemonGym {
 
-    private PokemonTrainer brock = new PokemonTrainer("Brock");
-    private FirePokemon charizard = new FirePokemon("Charrizard", 76, 150, "firenougats", "GRRRRRRRRRRRRRRR");
-    private WaterPokemon blastoise = new WaterPokemon("Blastoise", 40, 110, "Pokeflakes", "Blaaaaasssssstooooiiiiissss");
-    private GrassPokemon venusaur = new GrassPokemon("Venusaur", 50, 135, "Pokeleafs", "Veeeeeeeeennnnnuuuuuusaur");
-    private Pokemon ditto = new Pokemon("Ditto", 60, 140, "Everything", "Dittto diiiito ", "grass");
-    private ElectricPokemon raichu = new ElectricPokemon("Raichy", 80, 160, "Pokebrocks", "Raaaaiiiiicccchhhhuuuuuuu!!!!");
-    private WaterPokemon gyarados = new WaterPokemon("Gyarados", 90, 180, "Pokeflakes", "Gyaaaaaaaaarrrraaaadoooos");
+    public void enteredTheGym(PokemonTrainer player1);
 
-    public PokemonTrainer getBrock() {
-        return brock;
-    }
+    public void printPokemon(List<Pokemon> pokemons);
 
-    public void setBrock(PokemonTrainer brock) {
-        this.brock = brock;
-    }
+    public Pokemon selectPokemon(String pokemon, PokemonTrainer trainer);
 
-    public FirePokemon getCharizard() {
-        return charizard;
-    }
+    public void fightRound(PokemonTrainer trainer, PokemonGymOwner owner, Pokemon pokemon, Pokemon gymPokemon);
 
-    public void setCharizard(FirePokemon charizard) {
-        this.charizard = charizard;
-    }
+    public Pokemon chooseGymPokemon(PokemonGymOwner gymOwner);
 
-    public WaterPokemon getBlastoise() {
-        return blastoise;
-    }
+    public Pokemon choosePokemon(PokemonTrainer trainer);
 
-    public void setBlastoise(WaterPokemon blastoise) {
-        this.blastoise = blastoise;
-    }
+    public int randomAttackByGymOwner();
 
-    public GrassPokemon getVenusaur() {
-        return venusaur;
-    }
+    public String chooseAttackPlayer(Pokemon p);
 
-    public void setVenusaur(GrassPokemon venusaur) {
-        this.venusaur = venusaur;
-    }
+    public void performAttackPlayer(Pokemon pokemon, Pokemon gymPokemon, String attack);
 
-    public Pokemon getDitto() {
-        return ditto;
-    }
+    public void gymOwnerAttacks(Pokemon gymPokemon, Pokemon pokemon);
 
-    public void setDitto(Pokemon ditto) {
-        this.ditto = ditto;
-    }
+    public void attackOrChange(Pokemon pokemon, Pokemon gymPokemon, PokemonTrainer trainer, PokemonGymOwner gym);
 
-    public ElectricPokemon getRaichu() {
-        return raichu;
-    }
-
-    public void setRaichu(ElectricPokemon raichu) {
-        this.raichu = raichu;
-    }
-
-    public WaterPokemon getGyarados() {
-        return gyarados;
-    }
-
-    public void setGyarados(WaterPokemon gyarados) {
-        this.gyarados = gyarados;
-    }
 }
