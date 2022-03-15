@@ -7,9 +7,6 @@ public class FirePokemon extends Pokemon{
 
     private static final List<String> attacks = Arrays.asList("Inferno", "PyroBall", "FireLash", "FlameThrower");
 
-    public FirePokemon() {
-    }
-
     public FirePokemon(String name, int level, int hp, String food, String sound) {
         super(name, level, hp, food, sound, type);
     }

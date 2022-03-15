@@ -7,7 +7,7 @@ public class PokemonGymImpl implements PokemonGym {
     PokemonGymOwner gymOwner = new PokemonGymOwner();
     System.out.println("You have entered the gymOwner");
     System.out.println("In front of you stands a pokemontrainer");
-    System.out.println("Brock: Hello stranger, I'm " +gymOwner.getBrock().getName() + " the gymowner of the " + gymOwner.getVillage() + "-gymOwner. Who are you?");
+    System.out.println("Brock: Hello stranger, I'm " +gymOwner.getBrock().getName() + " the gymowner of the Oreburgh-gymOwner. Who are you?");
     System.out.println("I'm " + player1.getName() + " and i'm here to challenge you for a battle");
     System.out.println("So your after mine badge to, lets fight!!!");
 
@@ -109,25 +109,25 @@ public class PokemonGymImpl implements PokemonGym {
         String type = p.getType();
         switch (type) {
             case "fire" -> {
-                FirePokemon fp = new FirePokemon();
+                FirePokemon fp = (FirePokemon) p;
                 System.out.println("Choose your attack");
                 System.out.println(fp.getAttacks());
                 return speler_A.nextLine();
             }
             case "water" -> {
-                WaterPokemon wp = new WaterPokemon();
+                WaterPokemon wp = (WaterPokemon) p;
                 System.out.println("Choose your attack");
                 System.out.println(wp.getAttacks());
                 return speler_A.nextLine();
             }
             case "electric" -> {
-                ElectricPokemon ep = new ElectricPokemon();
+                ElectricPokemon ep = (ElectricPokemon) p;
                 System.out.println("Choose your attack");
                 System.out.println(ep.getAttacks());
                 return speler_A.nextLine();
             }
             default -> {
-                GrassPokemon gp = new GrassPokemon();
+                GrassPokemon gp = (GrassPokemon) p;
                 System.out.println("Choose your attack");
                 System.out.println(gp.getAttacks());
                 return speler_A.nextLine();

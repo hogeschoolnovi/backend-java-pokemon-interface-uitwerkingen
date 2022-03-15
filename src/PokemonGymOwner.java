@@ -3,9 +3,7 @@ import java.util.List;
 
 public class PokemonGymOwner {
 
-    private List<Pokemon> pokemonList ;
     private PokemonTrainer brock = new PokemonTrainer("Brock");
-    private String village;
     private FirePokemon charizard = new FirePokemon("Charrizard", 76, 150, "firenougats", "GRRRRRRRRRRRRRRR");
     private WaterPokemon blastoise = new WaterPokemon("Blastoise", 40, 110, "Pokeflakes", "Blaaaaasssssstooooiiiiissss");
     private GrassPokemon venusaur = new GrassPokemon("Venusaur", 50, 135, "Pokeleafs", "Veeeeeeeeennnnnuuuuuusaur");
@@ -16,23 +14,9 @@ public class PokemonGymOwner {
     public PokemonGymOwner() {
     }
 
-    public PokemonGymOwner(PokemonTrainer brock, String village, FirePokemon charizard, WaterPokemon blastoise, GrassPokemon venusaur, GrassPokemon ditto, ElectricPokemon raichu, WaterPokemon gyarados) {
-        this.brock = brock;
-        this.village = village;
-        this.charizard = charizard;
-        this.blastoise = blastoise;
-        this.venusaur = venusaur;
-        this.ditto = ditto;
-        this.raichu = raichu;
-        this.gyarados = gyarados;
-    }
 
     public PokemonTrainer getBrock() {
         return brock;
-    }
-
-    public String getVillage() {
-        return village;
     }
 
     public FirePokemon getCharizard() {
@@ -60,8 +44,7 @@ public class PokemonGymOwner {
     }
 
     public List<Pokemon> getPokemonList() {
-        List<Pokemon> list = Arrays.asList(getCharizard(), getBlastoise(), getDitto(), getGyarados(), getRaichu(), getVenusaur());
-        return list;
+        return Arrays.asList(getCharizard(), getBlastoise(), getDitto(), getGyarados(), getRaichu(), getVenusaur());
     }
 
 
