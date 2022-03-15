@@ -1,14 +1,11 @@
 public abstract class Pokemon {
 
-    private String name;
-    private int level;
+    private final String name;
+    private final int level;
     private int hp;
-    private String food;
-    private String sound;
-    private String type;
-
-    public Pokemon() {
-    }
+    private final String food;
+    private final String sound;
+    private final String type;
 
     public Pokemon(String name, int level, int hp, String food, String sound, String type) {
         this.name = name;

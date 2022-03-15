@@ -7,9 +7,6 @@ public class WaterPokemon extends Pokemon{
 
     private static final List<String> attacks = Arrays.asList("Surf", "HydroPump", "HydroCanon", "RainDance");
 
-    public WaterPokemon() {
-    }
-
     public WaterPokemon(String name, int level, int hp, String food, String sound) {
         super(name, level, hp, food, sound, type);
     }
