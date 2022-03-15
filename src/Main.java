@@ -1,53 +1,31 @@
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-
         Scanner speler_A = new Scanner(System.in);
-        PokemonGym gym = new PokemonGym();
-
-
-//        System.out.println("First player please enter your name: ");
-//        String userA = speler_A.nextLine();
-//        PokemonTrainer player1 = new PokemonTrainer(userA);
-
-        System.out.println("Enter your name please");
-        PokemonTrainer trainerA = new PokemonTrainer(speler_A.nextLine());
-//        System.out.println("Welcome to our Pokemon Game, " + trainerA.getName() +  "!");
-//        System.out.println("Would you like to enter a new Gym?");
-//        System.out.println("Y/N:");
-//        if(speler_A.nextLine() == "Y"){
-//            System.out.println(gym.getBrock().getName() + " welcomes you in his PokemonGym!");
-//        }
-//        System.out.println(gym.getBrock().getName() + " dares you for a fight!");
-//        System.out.println("Would you accept this fight?");
-//        System.out.println("Y/N:");
-//        if (speler_A.nextLine() == "Y"){
-//            System.out.println("The fight between " + trainerA.getName() + " and " + gym.getBrock().getName() + " begins in ");
-//            System.out.println("3...");
-//            System.out.println("2...");
-//            System.out.println("1...");
-//            System.out.println("Lets fight!");
-//            List<String> names = null;
-//            names.add(trainerA.getBlastoise().getName());
-//            names.add(trainerA.getGyarados().getName());
-//            names.add(trainerA.getCharizard().getName());
-//            names.add(trainerA.getDitto().getName());
-//            names.add(trainerA.getRaichu().getName());
-//            names.add(trainerA.getVenusaur().getName());
-//            trainerA.setPokemons(names);
-            System.out.println("Choose your first Pokemon");
-            System.out.println("You can choose out :" + trainerA.getPokemons());
-
-            gym.getGyarados().rainDance(gym.getGyarados(), trainerA.getBlastoise());
-            System.out.println(trainerA.getBlastoise().getAttacks());
-
-
-
-
+        PokemonGymImpl pokemonGym = new PokemonGymImpl();
+        System.out.println("First player please enter your name: ");
+        String userA = speler_A.nextLine();
+        PokemonTrainer player1 = new PokemonTrainer(userA);
+        List<Pokemon> names = new ArrayList<>();
+        names.add(player1.getBlastoise());
+        names.add(player1.getGyarados());
+        names.add(player1.getCharizard());
+        names.add(player1.getDitto());
+        names.add(player1.getRaichu());
+        names.add(player1.getVenusaur());
+        player1.setPokemons(names);
+        System.out.println("To start your game, we have given you 6 Pokemons use");
+        System.out.println("this are the Pokemons you get:");
+        pokemonGym.printPokemon(names);
+        System.out.println("Would you like to enter a gym looking for a fight?");
+        System.out.println("Please enter yes or no");
+        if (speler_A.nextLine().equals("yes")) {
+            pokemonGym.enteredTheGym(player1);
+        }
 
     }
+
 
 }
