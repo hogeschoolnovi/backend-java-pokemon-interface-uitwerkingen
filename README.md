@@ -21,16 +21,16 @@ Super klasse. Ook gaan we kijken om gebruik te maken van overloading, polymorfis
 De applicatie moet voldoen aan het volgende:
 
 - Een `abstract` Super klasse met minimaal 5 `private` `final`  variabelen,  5 `private`variabele, 1 constructor, 6 getters en 1 setter;
-- 4 subklassen die, naast alles dat ze erfen, zelf ook minimaal 2 `private` `final` variabelen, 1 constructor, 4 methodes,  1 getter bevatten.
+- 4 subklassen die, naast alles dat ze erven, zelf ook minimaal 2 `private` `final` variabelen, 1 constructor, 4 methodes, 1 getter bevatten.
 - Een `main`-klasse met een `main`-methode;
 - Een `interface` met 11 methodes
 - Een implementatie van de `interface` waarin alle methodes worden overschreven met een `@Override`
-- 2 normale klassen met minimaal 8 variabelen, constructor, getters en setters
+- 2 normale klassen met minimaal 8 variabelen, constructor, getters en setters, waarvan de een de ander extends.
 
-### Afwijkjing van werkwijze
+### Afwijking van werkwijze
 
-Omdat jullie inmiddels wat verder gevorderd zijn met het programeren met `Java` gaan we jullie laten ervaren hoe het kan zijn om samen een 
-applicatie in elkaar te zetten. Jullie krijgen hierbij een deel van de code van ons. Deze code wordt bijgeleverd in een apparte klassen met instructies zodat jullie deze op de juiste plaats kunnen zetten in app. 
+Omdat jullie inmiddels wat verder gevorderd zijn met het programmeren met `Java` gaan we jullie laten ervaren hoe het kan zijn om samen een 
+applicatie in elkaar te zetten. Jullie krijgen hierbij een deel van de code van ons. Deze code wordt bijgeleverd in een aparte klassen met instructies zodat jullie deze op de juiste plaats kunnen zetten in app. 
 Dit betekend ook dat een groot deel van de methodes al benoemt zullen zijn. Dit is nodig om straks een werkende interactieve applicatie te hebben! 
 
 ## Stappenplan
@@ -59,7 +59,7 @@ Het is uitdagender om jouw eigen stappenplan te maken, maar als je niet weet waa
 6. De volgende methodes hebben nog een extra functie
   - rainDance heeft geen effect op electric Pokemons maar geeft een `system.out.println` met de boodschap: has no effect on (vijand)
   - rainDance levert een hp boost aan vijanden grass types
-  - tunder levert een hp boost aan electric Pokemons
+  - thunder levert een hp boost aan electric Pokemons
   - leechSeed trekt hp van de vijand af en geeft deze hp aan de aanvallende Pokemon terug
 7. In de interface plaatsen we de methodes zonder uitwerking. Dus alleen het returntype, naam, datatypes van de parameters en de parameters van de methode.
 8. In de implementatie van de interface zetten we gehele methodes. Vergeet de `@Override` niet.
