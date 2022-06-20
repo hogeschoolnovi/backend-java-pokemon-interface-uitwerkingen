@@ -51,6 +51,10 @@ public class PokemonTrainer {
     public void setPokemons(List<Pokemon> pokemons) {
         this.pokemons = pokemons;
     }
+    
+      public List<Pokemon> getPokemonList() {
+        return Arrays.asList(getCharizard(), getBlastoise(), getDitto(), getGyarados(), getRaichu(), getVenusaur());
+    }
 
 
 }
