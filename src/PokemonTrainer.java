@@ -1,16 +1,17 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class PokemonTrainer {
 
     private final String name;
-    private List<Pokemon> pokemons = new ArrayList<>();
     private final FirePokemon charizard = new FirePokemon("Charrizard", 76, 150, "firenougats", "GRRRRRRRRRRRRRRR");
     private final WaterPokemon blastoise = new WaterPokemon("Blastoise", 40, 110, "Pokeflakes", "Blaaaaasssssstooooiiiiissss");
     private final GrassPokemon venusaur = new GrassPokemon("Venusaur", 50, 135, "Pokeleafs", "Veeeeeeeeennnnnuuuuuusaur");
     private final GrassPokemon ditto = new GrassPokemon("Ditto", 60, 140, "Everything", "Dittto diiiito ");
     private final ElectricPokemon raichu = new ElectricPokemon("Raichu", 80, 160, "Pokebrocks", "Raaaaiiiiicccchhhhuuuuuuu!!!!");
     private final WaterPokemon gyarados = new WaterPokemon("Gyarados", 90, 180, "Pokeflakes", "Gyaaaaaaaaarrrraaaadoooos");
+    private List<Pokemon> pokemons = Arrays.asList(charizard, blastoise, venusaur, ditto, raichu, gyarados);
 
     public PokemonTrainer(String name) {
         this.name = name;
@@ -51,10 +52,7 @@ public class PokemonTrainer {
     public void setPokemons(List<Pokemon> pokemons) {
         this.pokemons = pokemons;
     }
-    
-      public List<Pokemon> getPokemonList() {
-        return Arrays.asList(getCharizard(), getBlastoise(), getDitto(), getGyarados(), getRaichu(), getVenusaur());
-    }
+
 
 
 }
